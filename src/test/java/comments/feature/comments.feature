@@ -9,9 +9,9 @@ Feature: Comments Page Feature
     
   @automated  
   Scenario: If I have not verified my email I see resend email prompt
-  	Given I am on a blog page
-  	And I login as an unverified user
-  	Then I should see a resend email prompt
+    Given I am on a blog page
+    And I login as an unverified user
+    Then I should see a resend email prompt
   
   @manual	
   Scenario: I can upvote a comment
