@@ -1,6 +1,6 @@
 Feature: Comments Page Feature
 	
-	@automated
+  @automated
   Scenario: I can add a comment
     Given I am on a blog page
     And I login as a user who can comment
