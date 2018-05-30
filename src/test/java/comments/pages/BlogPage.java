@@ -40,9 +40,10 @@ public class BlogPage extends Page {
     	return new SignInPage(webDriver);
     }
     
-    public void SaveComment(String commentTime) throws Exception{
+    public BlogPage SaveComment(String commentTime) throws Exception{
         commentTextBox.sendKeys(commentTime);
-        //postCommentButton.click();
+        postCommentButton.click();
+        return new BlogPage(webDriver);
     }
     
     public String GetTop1Comment() throws Exception{

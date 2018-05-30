@@ -67,14 +67,12 @@ public class CommentStepDefs {
 	public void i_write_a_comment() throws Throwable {
         DateTimeFormatter format = DateTimeFormatter.ofPattern("yyyyMMdd-HHmmss");
         commentTime = LocalDateTime.now().format(format);
-		blogPage.SaveComment(commentTime);
+		blogPage = blogPage.SaveComment(commentTime);
 	}
 
 	@Then("^My comment should be displayed at the top of the list$")
 	public void my_comment_should_be_displayed_at_the_top_of_the_list() throws Throwable {
 		String actualComment = blogPage.GetTop1Comment();
-	    // remove!! 
-	    commentTime = "20180529-225105";
 	    assertThat(actualComment, is(commentTime));
 	}
 	
